@@ -4,9 +4,9 @@ HiLoop是一个简约的桌面悬浮球工具，支持拖动及配置，提供�
 
 ## 整体效果
 
-![show-1](.\doc\show-1.gif)
+![show-1](https://gitee.com/baday19/hi-loop/blob/main/doc/show-1.gif)
 
-![show-0](.\doc\show-0.jpg)
+![show-0](\doc\show-0.jpg)
 
 ## 目录组织
 
