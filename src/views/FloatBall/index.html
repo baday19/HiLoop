@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>悬浮球</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="warp" @mouseup="handleMouseUp" @mousedown="handleMouseDown" @mouseenter="showMore" @mouseleave="hideMore">
+      <transition name="fade">
+        <div v-if="isNotMore" class="main-container">
+          <div class="text">{{count[0]}} : {{count[1]}}</div>
+          <div class="finish" :style="progress"></div>
+        </div>
+      </transition>
+      <div v-else class="son-container">
+        <div class="son-item" @click="showTodo">
+          <img draggable="false" src="../../assets/time.png" alt="待办">
+        </div>
+        <div class="son-item" @click="showEssay">
+          <img draggable="false" src="../../assets/edit.png" alt="随笔">
+        </div>
+        <div class="son-item">
+          <img draggable="false" src="../../assets/light.png" alt="笔记">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

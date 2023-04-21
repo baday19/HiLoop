@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>待办事项-HiLoop</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <div class="list-container">
+        <div class="todo-list">
+          <div class="list-title">待完成</div>
+          <div class="todo-item" v-for="(item,index) in todoList">
+            <div @click="changeStatus(item,index)" class="circle"></div>
+            <div class="main-content">
+              <div class="content">{{item.content}}</div>
+              <div @dblclick="delTodo(item,index)" class="time" :style="{color: (now>item.end_time?'#FA0A55':'')}">{{item.endTime}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="todo-list">
+          <div class="list-title">已完成</div>
+          <div class="todo-item finish-item" v-for="(item,index) in finishList">
+            <div @click="changeStatus(item,index)" class="circle" style="background-color: #49ce94;">
+              <img src="../../assets/checked.png">
+            </div>
+            <div class="main-content">
+              <div class="content">{{item.content}}</div>
+              <div @dblclick="delTodo(item,index)" class="time">{{item.endTime}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="formVisible" class="form-wrap">
+        <div class="todo-form">
+          <div class="content-item">
+            <input v-model="form.content" type="text" placeholder="待办事项" maxlength="128">
+          </div>
+          <div class="time-item">
+            <div class="detail-time">
+              <input v-model="form.month" @change="handleMonth" maxlength="2" type="number">
+              <div style="margin: 0 3px;">月</div>
+              <input v-model="form.date" @change="handleDate" maxlength="2" type="text">
+              <div style="margin: 0 3px;">日</div>
+            </div>
+            <div class="detail-time">
+              <input v-model="form.hour" @change="handleHour" maxlength="2" type="text">
+              <div style="margin: 0 6px;">:</div>
+              <input v-model="form.min" @change="handleMin" maxlength="2" type="text">
+              <!-- <div style="margin: 0 2px;">分</div> -->
+            </div>
+          </div>
+          <div class="form-btn" @click="submitTodo" style="margin-top: 10px;">确认</div>
+          <div class="form-btn close-btn" @click="showForm(false)">关闭</div>
+        </div>
+      </div>
+      <div class="add-btn" @click="showForm(true)">
+        <img src="../../assets/add.png">
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+html {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  user-select: none;
+}
+div {
+  box-sizing: border-box;
+}
+#app {
+  width: 80px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.main-container {
+  height: 30px;
+  width: 80px;
+  background-color: #FA0A55;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 3px solid #333;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.6;
+}
+.text {
+  z-index: 1;
+}
+.finish {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  background-color: #49CE95;
+  right: 50%;
+}
+
+.son-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  width: 80px;
+  font-size: 12px;
+}
+.son-item {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #49CE95;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.son-item img {
+  height: 12px;
+  width: 12px;
+}
+
+.fade-enter-active {
+  transition: opacity 0.2s;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-leave-to {
+  opacity: 0;
+}

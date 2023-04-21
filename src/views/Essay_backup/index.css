@@ -1,0 +1,42 @@
+html {
+  background-color: #FCFBFF;
+}
+.wrap {
+  padding: 5px;
+}
+.essay-item {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  /* min-height: 50px; */
+  color: #333;
+  margin-bottom: 13px;
+}
+.essay-title {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #E9EBF3; */
+}
+.essay-status {
+  font-size: 9px;
+  color: #888;
+  font-weight: normal;
+}
+.essay-content {
+  border-top: 1px solid #E9EBF3 !important;
+  padding: 8px 10px;
+  min-height: 50px;
+  border: none;
+  line-height: 15px;
+  font-size: 12px;
+}
+.essay-content div {
+  margin-bottom: 5px;
+}
+[contenteditable]:focus {
+	outline: none;
+}

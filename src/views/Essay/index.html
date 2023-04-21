@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>随心记-HiLoop</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <div class="input-area">
+        <div id="editing-essay" class="input" contenteditable="true" @keyup.ctrl.enter.native="submitEssay">
+          <div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="essay-list">
+        <div class="essay-item" v-for="(item,index) in essayList">
+          <div class="essay-title">
+            <div class="essay-time">{{item.time}}</div>
+            <div class="essay-status" @click="changeStatus(item,index)">{{item.status==0?'关闭':'展开'}}</div>
+          </div>
+          <div v-if="item.status==0" class="essay-content" v-html="item.content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
