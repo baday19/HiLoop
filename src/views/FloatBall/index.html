@@ -16,6 +16,9 @@
           <div class="text">{{count[0]}} : {{count[1]}}</div>
           <div class="finish" :style="progress"></div>
         </div>
+        <!-- <div v-if="isNotMore" class="naxida">
+          <img src="../../assets/nxd.png">
+        </div> -->
         <div v-else class="son-container">
           <div class="son-item" @click="showTodo">
             <img draggable="false" src="../../assets/time.png" alt="待办">
