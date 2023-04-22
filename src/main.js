@@ -13,8 +13,8 @@ const suspensionConfig = {
   height: 50,
 }
 // const suspensionConfig = {
-//   width: 83,
-//   height: 124
+//   width: 200,
+//   height: 347,
 // }
 
 // 定义所有可能用到的页面

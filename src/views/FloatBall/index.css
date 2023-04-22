@@ -14,14 +14,23 @@ div {
   box-sizing: border-box;
 }
 #app {
+  /* width: 80px;
+  height: 30px; */
+  /* width: 200px;
+  height: 347px;
+  overflow: hidden; */
+}
+.warp {
+  /* width: 200px;
+  height: 347px; */
   width: 80px;
   height: 30px;
   overflow: hidden;
 }
-/* .naxida img {
-  width: 83px;
-  height: 124px;
-} */
+.naxida img {
+  width: 200px;
+  height: 347px;
+}
 
 .main-container {
   height: 30px;
