@@ -19,8 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "vue": "^3.2.47",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.1.1",
