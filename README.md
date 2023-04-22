@@ -1,10 +1,18 @@
 # HiLoop
 
-HiLoop是一个简约的桌面悬浮球工具，支持拖动及配置，提供了待办事项、快速笔记等功能。忙里偷闲（科研是一种折磨）体验一下用前端的方式开发桌面端应用，学习的同时做一些有意思的小东西。
+HiLoop是一个简约的桌面悬浮球工具，支持拖动及配置，提供了待办事项、快速笔记等功能。忙里偷闲体验一下用前端的方式开发桌面端应用，学习的同时做一些有意思的小东西。
+
+> 叫HiLoop的原因是希望自己不要再内耗了，活在良性循环里:cry:
 
 ## 整体效果
 
-![show-1](https://gitee.com/baday19/hi-loop/blob/main/doc/show-1.gif)
+![show-1](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/show-2.jpg)
+
+:blush: 临时换了个小草神玩玩，静态的效果不是很好。如果想用人物的话可以自己上canvas或者用live2d，我还是喜欢简洁一点的小胶囊。
+
+> [草神图源](https://www.pixiv.net/artworks/107338044) @Shao
+
+![show-1](./doc/show-1.gif)
 
 ![show-0](\doc\show-0.jpg)
 
@@ -85,11 +93,11 @@ npm run package
 
 窗口属性设置transparent为true时窗口实际大小出现问题（变大了）
 
-![bug-1](.\doc\bug-1.jpg)
+![bug-1](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/bug-1.jpg)
 
 transparent为false时，大小正常。
 
-![bug-0](.\doc\bug-0.jpg)
+![bug-0](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/bug-0.jpg)
 
 在electron的issues里找到了相关的问题，作者进行了标记并没有解答
 
@@ -151,4 +159,6 @@ ipcMain.on('ballWindowMove', (e, data) => {
 
 将sqlite3从devDependencies移入dependencies中，重新打包好像好了
 
-# 重要更新
+# 重大更新
+
+:smile:应该不会有什么更新，写着玩的
