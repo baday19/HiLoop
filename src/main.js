@@ -12,6 +12,10 @@ const suspensionConfig = {
   width: 85,
   height: 50,
 }
+// const suspensionConfig = {
+//   width: 83,
+//   height: 124
+// }
 
 // 定义所有可能用到的页面
 const pages = {
@@ -99,6 +103,12 @@ ipcMain.on('openMenu', (e) => {
         click: () => {
           topFlag = !topFlag
           pages.suspensionWin.setAlwaysOnTop(topFlag)
+        }
+      },
+      {
+        label: '开发者工具',
+        click: () => {
+          pages.suspensionWin.webContents.openDevTools({mode:'detach'})
         }
       },
       {

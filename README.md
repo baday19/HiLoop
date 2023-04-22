@@ -149,4 +149,8 @@ ipcMain.on('ballWindowMove', (e, data) => {
 
 也许有时间的使用用electron-builder打包会好一些
 
+将sqlite3从devDependencies移入dependencies中
+
+全局安装了一下node-gyp和windows-build-tools好像好了？？
+
 # 重要更新

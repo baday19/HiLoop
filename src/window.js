@@ -16,6 +16,7 @@ const createSuspensionWindow = (suspensionConfig) => {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true,
+      webSecurity: false,
       preload: path.join(__dirname, 'preload.js'),
     },
   });

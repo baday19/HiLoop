@@ -19,8 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "node-gyp": "^9.3.1",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.1.1",
@@ -28,7 +28,6 @@
     "@electron-forge/maker-rpm": "^6.1.1",
     "@electron-forge/maker-squirrel": "^6.1.1",
     "@electron-forge/maker-zip": "^6.1.1",
-    "electron": "24.1.2",
-    "sqlite3": "^5.0.8"
+    "electron": "24.1.2"
   }
 }
