@@ -6,15 +6,15 @@ HiLoop是一个简约的桌面悬浮球工具，支持拖动及配置，提供�
 
 ## 整体效果
 
-![show-1](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/show-2.jpg)
+![show-2](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/show-2.jpg)
 
 :blush: 临时换了个小草神玩玩，静态的效果不是很好。如果想用人物的话可以自己上canvas或者用live2d，我还是喜欢简洁一点的小胶囊。
 
 > [草神图源](https://www.pixiv.net/artworks/107338044) @Shao
 
-![show-1](./doc/show-1.gif)
+![show-1](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/show-1.gif)
 
-![show-0](\doc\show-0.jpg)
+![show-0](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/show-0.jpg)
 
 ## 目录组织
 
