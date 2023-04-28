@@ -1,6 +1,9 @@
 const { ipcRenderer } = require("electron");
 const Vue = require('vue')
 const { formatterTime } = require("../../utils/date.js")
+const { applyConfig } = require("../../utils/store.js")
+
+applyConfig()
 
 const app = Vue.createApp({
 

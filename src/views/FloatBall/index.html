@@ -12,21 +12,21 @@
     <div class="warp" @mouseup="handleMouseUp" @mousedown="handleMouseDown" @mouseenter="showMore"
       @mouseleave="hideMore">
       <transition name="fade">
-        <div v-if="isNotMore" class="main-container">
+        <div v-if="isNotMore" class="main-container" :style="{opacity: opacity, 'background-color': subColor}">
           <div class="text">{{count[0]}} : {{count[1]}}</div>
-          <div class="finish" :style="progress"></div>
+          <div class="finish" :style="{'right': progress, 'background-color': mainColor}"></div>
         </div>
         <!-- <div v-if="isNotMore" class="naxida">
           <img src="../../assets/nxd.png">
         </div> -->
         <div v-else class="son-container">
-          <div class="son-item" @click="showTodo">
+          <div class="son-item" :style="{'background-color': mainColor}" @click="showTodo">
             <img draggable="false" src="../../assets/time.png" alt="待办">
           </div>
-          <div class="son-item" @click="showEssay">
+          <div class="son-item" :style="{'background-color': mainColor}" @click="showEssay">
             <img draggable="false" src="../../assets/edit.png" alt="随笔">
           </div>
-          <div class="son-item">
+          <div class="son-item" :style="{'background-color': mainColor}">
             <img draggable="false" src="../../assets/light.png" alt="笔记">
           </div>
         </div>

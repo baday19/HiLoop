@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>设置</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrap">
+      <div class="menu">
+        <div class="menu-title">通用</div>
+        <div class="menu-main">
+          <div class="menu-item">
+            <div class="item-title">
+              悬浮球透明度
+              <span>(输入0到1之间的数)</span>
+            </div>
+            <div class="item-content">
+              <input @change="checkOpacity" v-model="opacity" class="opacity-input" maxlength="5" type="text">
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-title">
+              主题色
+              <span>(主色与副色)</span>
+            </div>
+            <div class="item-content">
+              <div class="color-input">
+                <div class="color-warp">
+                  <input @change="checkColor(0)" v-model="mainColor" placeholder="主色" maxlength="7" type="text">
+                </div>
+                <div :style="{'background-color': mainColor}" class="color-preview"></div>
+              </div>
+              <div class="color-input">
+                <div class="color-warp">
+                  <input @change="checkColor(1)" v-model="subColor" placeholder="副色" maxlength="7" type="text">
+                </div>
+                <div :style="{'background-color': subColor}" class="color-preview"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box">
+      <div @click="storeConfig(0)" class="store-btn">保存</div>
+      <div @click="storeConfig(1)" class="store-btn">恢复默认</div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

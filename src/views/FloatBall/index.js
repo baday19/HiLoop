@@ -1,6 +1,8 @@
 const { ipcRenderer } = require("electron");
 const Vue = require('vue')
+const {defaultConfig, getConfig, applyConfig}  = require("../../utils/store")
 
+applyConfig()
 let biasX = 0
 let biasY = 0
 const moveS = [0, 0, 0, 0]
@@ -17,15 +19,26 @@ const app = Vue.createApp({
   data: () => {
     return {
       isNotMore: true,
-      count: [0,0]
+      count: [0, 0],
+      opacity: 0.8,
+      mainColor: '',
+      subColor: ''
     }
   },
 
   mounted() {
-    console.log(1)
-    ipcRenderer.on("update",(e,data)=>{
+    const storage = getConfig()
+    this.mainColor = storage.mainColor
+    this.subColor = storage.subColor
+    this.opacity = storage.opacity
+    ipcRenderer.on("update", (e, data) => {
       console.log(data)
       this.count = data
+    })
+    ipcRenderer.on("config", (e, data) => {
+      this.opacity = data.opacity
+      this.mainColor = data.mainColor
+      this.subColor = data.subColor
     })
     ipcRenderer.send("updateBall")
   },
@@ -51,7 +64,7 @@ const app = Vue.createApp({
       // ipcRenderer.send('setFloatIgnoreMouse', true)
     },
     handleMouseDown(e) {
-      if(e.button == 2) {
+      if (e.button == 2) {
         this.isNotMore = true
         ipcRenderer.send('openMenu')
         return
@@ -71,13 +84,14 @@ const app = Vue.createApp({
     },
   },
   computed: {
-    progress: function() {
+    progress: function () {
       const totalCount = this.count[0] + this.count[1]
-      if(totalCount == 0) {
-        return "right: 0%;"
+      console.log("aaa" + totalCount)
+      if (totalCount == 0) {
+        return "0%"
       } else {
-        const percent = parseInt(this.count[1]*100/totalCount)
-        return "right: " + percent + "%"
+        const percent = parseInt(this.count[1] * 100 / totalCount)
+        return percent + "%"
       }
     }
   }

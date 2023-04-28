@@ -1,7 +1,7 @@
 const { app, Menu, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const { initDb, addEssay, changeEssayStatus, getAllEssay, getAllTodo, addTodo, changeTodoStatus, getBallData } = require('./utils/database.js')
-const { createSuspensionWindow, createEssayWindow, createTodoWindow } = require("./window.js")
+const { createSuspensionWindow, createEssayWindow, createTodoWindow, createConfigWindow } = require("./window.js")
 // Menu.setApplicationMenu(null);
 
 // 初始化数据库，生成库和表
@@ -12,6 +12,7 @@ const suspensionConfig = {
   width: 85,
   height: 50,
 }
+
 // const suspensionConfig = {
 //   width: 200,
 //   height: 347,
@@ -95,7 +96,14 @@ ipcMain.on('openMenu', (e) => {
       {
         label: '配置',
         click: () => {
-          console.log(1)
+          if (pages.configWin) {
+            pages.configWin.close()
+            pages.configWin = null
+          }
+          pages.configWin = createConfigWindow()
+          pages.configWin.on('close', (e, data) => {
+            pages.configWin = null
+          })
         }
       },
       {
@@ -108,7 +116,14 @@ ipcMain.on('openMenu', (e) => {
       {
         label: '开发者工具',
         click: () => {
-          pages.suspensionWin.webContents.openDevTools({mode:'detach'})
+          pages.suspensionWin.webContents.openDevTools({ mode: 'detach' })
+        }
+      },
+      {
+        label: '重启',
+        click: () => {
+          app.quit()
+          app.relaunch()
         }
       },
       {
@@ -180,4 +195,8 @@ ipcMain.on('updateBall', (e, data) => {
   getBallData().then(res => {
     pages.suspensionWin.webContents.send('update', res)
   })
+})
+
+ipcMain.on('updateConfig', (e, data) => {
+  pages.suspensionWin.webContents.send('config', data)
 })
