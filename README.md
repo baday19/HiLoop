@@ -18,6 +18,8 @@ HiLoop是一个简约的桌面悬浮球工具，支持拖动及配置，提供�
 
 ![show-0](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/show-0.jpg)
 
+![config](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/config.jpg)
+
 ## 目录组织
 
 > + src // 项目主目录
@@ -166,3 +168,5 @@ ipcMain.on('ballWindowMove', (e, data) => {
 ## 2023.04.28
 
 增加配置页面：可设置悬浮球的透明度及软件主题颜色
+
+![config](https://raw.githubusercontent.com/baday19/HiLoop/main/doc/config.jpg)
