@@ -73,8 +73,31 @@ const createTodoWindow = () => {
   return win
 }
 
+const createConfigWindow = () => {
+  const { left, top } = { left: screen.getPrimaryDisplay().workAreaSize.width - 360, top: screen.getPrimaryDisplay().workAreaSize.height - 840 }
+  const win = new BrowserWindow({
+    width: 300,
+    minWidth: 300,
+    maxWidth: 300,
+    height: 500,
+    x: left,
+    y: top,
+    icon: path.join(__dirname, './assets/edit-green.png'),
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
+      preload: path.join(__dirname, 'preload.js'),
+    },
+  });
+  win.loadFile(path.join(__dirname, 'views/Config/index.html'));
+  // win.webContents.openDevTools()
+  return win
+}
+
 module.exports = {
   createSuspensionWindow,
   createEssayWindow,
-  createTodoWindow
+  createTodoWindow,
+  createConfigWindow
 }

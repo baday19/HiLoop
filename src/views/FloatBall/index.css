@@ -35,7 +35,7 @@ div {
 .main-container {
   height: 30px;
   width: 80px;
-  background-color: #FA0A55;
+  background-color: var(--sub-color);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ div {
   font-weight: bold;
   position: relative;
   overflow: hidden;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 .text {
   z-index: 1;
@@ -54,8 +54,8 @@ div {
   position: absolute;
   width: 80px;
   height: 100%;
-  background-color: #49CE95;
-  right: 50%;
+  background-color: var(--main-color);
+  /* right: 50%; */
 }
 
 .son-container {
@@ -70,7 +70,7 @@ div {
   height: 22px;
   width: 22px;
   border-radius: 50%;
-  background-color: #49CE95;
+  background-color: var(--main-color);
   border: 2px solid #333;
   display: flex;
   align-items: center;

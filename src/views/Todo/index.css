@@ -1,3 +1,5 @@
+/* @import url("../../style/common.css"); */
+
 html {
   background-color: #F2F3F5;
   overflow: -moz-hidden-unscrollable;
@@ -45,7 +47,7 @@ div {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 1px solid #49CE95;
+  border: 1px solid var(--main-color);
   margin-right: 9px;
   flex-shrink: 0;
   display: flex;
@@ -69,7 +71,7 @@ div {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  background-color: #49CE95;
+  background-color: var(--main-color);
   border-radius: 50%;
   height: 35px;
   width: 35px;
@@ -154,7 +156,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #49CE95;
+  background-color: var(--main-color);
   color: white;
   margin-top: 7px;
   border-radius: 15px;
@@ -163,8 +165,8 @@ input::placeholder {
 
 .close-btn {
   background-color: white;
-  color: #49CE95;
-  border: 1px solid #49CE95;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {

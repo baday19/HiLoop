@@ -17,14 +17,14 @@
             <div @click="changeStatus(item,index)" class="circle"></div>
             <div class="main-content">
               <div class="content">{{item.content}}</div>
-              <div @dblclick="delTodo(item,index)" class="time" :style="{color: (now>item.end_time?'#FA0A55':'')}">{{item.endTime}}</div>
+              <div @dblclick="delTodo(item,index)" class="time" :style="{color: (now>item.end_time?'var(--sub-color)':'')}">{{item.endTime}}</div>
             </div>
           </div>
         </div>
         <div class="todo-list">
           <div class="list-title">已完成</div>
           <div class="todo-item finish-item" v-for="(item,index) in finishList">
-            <div @click="changeStatus(item,index)" class="circle" style="background-color: #49ce94;">
+            <div @click="changeStatus(item,index)" class="circle" style="background-color: var(--main-color);">
               <img src="../../assets/checked.png">
             </div>
             <div class="main-content">
